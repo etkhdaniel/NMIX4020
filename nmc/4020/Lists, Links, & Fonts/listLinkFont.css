@@ -2,14 +2,14 @@
 
 /* Import Special Font */
 @font-face {
-    font-family: myFont;
+    font-family: soSad;
     src: url(BRUSHSTP.ttf);
 }
 div {
     font-family: myFont;
 }
 p {
-    font-family: myFont;
+    font-family: soSad;
 }
 
 /* Image bullet point */
