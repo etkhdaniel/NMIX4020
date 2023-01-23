@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valentine</title>
+    </head>
+    <!--Internal CSS-->
+    <style>
+        body {
+            background-color: blanchedalmond;
+            margin: 0px;
+            padding: 0px;
+        }
+        .heart {
+            background-color: red;
+            display: inline-block;
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            left: 45%; top: 43%;
+            transform: rotate(45deg);
+            animation: beat 2s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: red;
+            height: 40px;
+            width: 70px;
+            position: relative;
+            bottom: 38px;
+            border-radius: 70px 70px 0px 0px;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            20% {
+                transform: scale(1.25);
+                translateX(5%)
+                translateY(5%);
+            }
+        }
+    </style>
+</html>
