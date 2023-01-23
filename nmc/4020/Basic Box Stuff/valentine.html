@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valentine</title>
-    </head>
     <!--Internal CSS-->
     <style>
         body {
@@ -36,24 +35,26 @@
         }
 
         .heart:before {
-            top: -25px;
-            left: 0;
+            bottom: 38px;
         }
 
         .heart:after {
-            left: 25px;
-            top: 0;
+            bottom: 25px;
+            right: 52px;
+            transform: rotate(-90deg);
         }
 
         @keyframes heartbeat {
-            0% {
-                transform: scale(1);
-            }
-            20% {
-                transform: scale(1.25);
-                translateX(5%)
-                translateY(5%);
+            50% {
+                transform: rotate(45deg) scale(1.5);
             }
         }
     </style>
+    </head>
+<body>
+    <div class="heart">
+        <div class="heart:before"></div>
+        <div class="heart:after"></div>
+    </div>
+</body>
 </html>
