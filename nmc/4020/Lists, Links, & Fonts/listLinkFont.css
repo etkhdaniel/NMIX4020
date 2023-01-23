@@ -2,12 +2,10 @@
 
 /* Import Special Font */
 @font-face {
-    font-family: myFont;
-    src: url(BRUSHSTP.ttf);
+    font-family: 'IBM Plex Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
 }
-.brushstp {
-    font-family: myFont;
-}
+
 /* Image bullet point */
 ul {
     padding-left: 2rem;
