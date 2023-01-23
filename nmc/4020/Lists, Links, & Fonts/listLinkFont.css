@@ -1,5 +1,13 @@
 /* CSS Document */
 
+/* Import Special Font */
+@font-face {
+    font-family: myFont;
+    src: url(BRUSHSTP.ttf);
+}
+.brushstp {
+    font-family: myFont;
+}
 /* Image bullet point */
 ul {
     padding-left: 2rem;
@@ -39,11 +47,3 @@ a:active {
     color: aqua;
 }
 
-/* Import Special Font */
-@font-face {
-    font-family: myFont;
-    src: url(BRUSHSTP.ttf);
-}
-.brushstp {
-    font-family: myFont;
-}
