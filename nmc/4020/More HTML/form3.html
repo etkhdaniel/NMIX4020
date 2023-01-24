@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 3</title>
+    <!--Internal CSS-->
+    <style>
+    /* Form style copied from textbook */
+    form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid rgb(211, 55, 201);
+    border-radius: 1em;
+    }
+
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    form li + li {
+    margin-top: 1em;
+    }
+
+    label {
+    /* Uniform size & Alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    }
+
+    nput,
+    textarea {
+    /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+    font: 1em sans-serif;
+
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Match form field borders */
+    border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+    }
+
+    textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* Provide space to type some text */
+    height: 5em;
+    }
+
+    .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+    }
+
+    button {
+    /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+    margin-left: 0.5em;
+    }
+    </style>
+</head>
+<body>
+    <header>Form Practice</header>
+    <main>
+        <form action="showme.html" method="get" id="firstName" name="firstName">
+            <ul>
+                <label for="price">Choose a maximum house price: </label>
+                <input
+                    type="range"
+                    name="price"
+                    id="price"
+                    min="50000"
+                    max="500000"
+                    step="100"
+                    value="250000" />
+                <output class="price-output" for="price"></output>
+                </input>
+                
+            <input type="color" name="color" id="color" style="margin-top: 20px"> 
+                <output class="color-output" for="color"></output>
+            </input>
+
+                <li class="button" style="margin-top: 20px">
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+            
+        </form>
+
+    </main>
+</body>
+<!--JavaScript-->
+<script>
+    /* Visual Feedback for Slider */
+    const price = document.querySelector("#price");
+    const output = document.querySelector(".price-output");
+
+    output.textContent = price.value;
+    output.textContent = color.value;
+
+
+    price.addEventListener("input", () => {
+    output.textContent = price.value;
+    });
+    
+</script>
+
+</html>
