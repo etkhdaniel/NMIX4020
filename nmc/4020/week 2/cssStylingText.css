@@ -1,0 +1,23 @@
+html {
+    font-family:fantasy;
+    font-size: 10px;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px blueviolet;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+p {
+    font-size: 2rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
