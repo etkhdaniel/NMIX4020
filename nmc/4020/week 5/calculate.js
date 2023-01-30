@@ -1,5 +1,7 @@
 let input1 = document.querySelector('#input1');
 let input2 = document.querySelector('#input2');
+let input3 = document.querySelector('#input3');
+let input4 = document.querySelector('#input4');
 let additionButton = document.querySelector('#addButton');
 let subtractionButton = document.querySelector('#subButton');
 let outputField = document.querySelector('#output');
@@ -16,8 +18,8 @@ additionButton.onclick = function() {
 }
 
 function sub() {
-    let subtraction1 = Number(input1.value);
-    let subtraction2 = Number(input2.value);
+    let subtraction1 = Number(input3.value);
+    let subtraction2 = Number(input4.value);
     let difference = subtraction1 + subtraction2;
     outputField.value = difference;
 }
