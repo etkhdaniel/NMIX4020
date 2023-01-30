@@ -4,8 +4,8 @@ let additionButton = document.querySelector('#addButton');
 let outputField = document.querySelector('#output');
 
 function add() {
-    let addition1 = input1.value;
-    let addition2 = input2.value;
+    let addition1 = Number(input1.value);
+    let addition2 = Number(input2.value);
     let sum = addition1 + addition2;
     outputField.value = sum;
 }
