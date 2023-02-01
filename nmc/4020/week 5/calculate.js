@@ -20,7 +20,7 @@ additionButton.onclick = function() {
 function sub() {
     let subtraction1 = Number(input1.value);
     let subtraction2 = Number(input2.value);
-    let difference = subtraction1 + subtraction2;
+    let difference = subtraction1 - subtraction2;
     outputField.value = difference;
 }
 
