@@ -5,7 +5,6 @@ let subtractionButton = document.querySelector('#subButton');
 let divisionButton = document.querySelector('#divButton');
 let multiplyButton = document.querySelector('#timesButton');
 let outputField = document.querySelector('#output');
-let outputField2 = document.querySelector('#output2');
 
 function add() {
     let addition1 = Number(input1.value);
@@ -22,7 +21,7 @@ function sub() {
     let subtraction1 = Number(input1.value);
     let subtraction2 = Number(input2.value);
     let difference = subtraction1 + subtraction2;
-    outputField2.value = difference;
+    outputField.value = difference;
 }
 
 subtractionButton.onclick = function() {
