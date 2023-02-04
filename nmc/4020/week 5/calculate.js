@@ -10,7 +10,7 @@ function add() {
     let addition1 = Number(input1.value);
     let addition2 = Number(input2.value);
     let sum = addition1 + addition2;
-    outputField.value = sum;
+    outputField.value = "$" + sum;
 }
 
 additionButton.onclick = function() {
@@ -21,7 +21,7 @@ function sub() {
     let subtraction1 = Number(input1.value);
     let subtraction2 = Number(input2.value);
     let difference = subtraction1 - subtraction2;
-    outputField.value = difference;
+    outputField.value = "$" + difference;
 }
 
 subtractionButton.onclick = function() {
@@ -32,7 +32,7 @@ function div() {
     let division1 = Number(input1.value);
     let division2 = Number(input2.value);
     let quotient = division1 / division2;
-    outputField.value = quotient;
+    outputField.value = "$" + quotient;
 }
 
 divisionButton.onclick = function() {
@@ -43,7 +43,7 @@ function times() {
     let multiply1 = Number(input1.value);
     let multiply2 = Number(input2.value);
     let product = multiply1 * multiply2;
-    outputField.value = product;
+    outputField.value = "$" + product;
 }
 
 timesButton.onclick = function() {
