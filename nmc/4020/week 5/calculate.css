@@ -1,0 +1,14 @@
+
+article {
+    padding: 20px;
+    border-style: double;
+    border-radius: 2em;
+    border-width: 2px;
+    margin: 10px;
+}
+.buttons button {
+    width: 100%;
+    margin-top: 15px;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
