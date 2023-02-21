@@ -9,7 +9,7 @@
     <body>
         <input type="text" id="namehere" placeholder="Your name here"><br>
         <div id="result"></div>
-        <button onclick="fotune()">your fortune</button>
+        <button onclick="fortune()">Your Fortune</button>
     </body>
 </html>
 <script>
@@ -19,5 +19,5 @@
         let item = Math.floor((Math.random() * outcomes.length));
         let result = documet.querySelector('#namehere').value;
         result.innerHTML = name + " your fortune is that you will " + outcomes[item];
-    }
+    } // fortune
 </script>
