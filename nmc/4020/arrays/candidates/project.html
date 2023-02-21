@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        .button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+        #pics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        #out1, #out2, #out3 {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <div id="one">
+            <button id="add1">Slideshow 1 +</button>
+            <button id="sub1">Slideshow 1 -</button>
+        </div>
+        <div id="two">
+            <button id="add2">Slideshow 2 +</button>
+            <button id="sub2">Slideshow 2 -</button>
+        </div>
+        <div id="three">
+            <button id="add3">Slideshow 3 +</button>
+            <button id="sub3">Slideshow 3 +</button>
+        </div>
+    </div>
+    
+    <div id="pics">
+    <ol id="out1"></ol>
+    <ol id="out2"></ol>
+    <ol id="out3"></ol>
+    </div>
+</body>
+</html>
+<script src="js/project.js"></script>
