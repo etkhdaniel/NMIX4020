@@ -1,0 +1,15 @@
+html {
+    background:linear-gradient(.25turn, rgb(255, 103, 219), rgb(135, 47, 243), rgb(45, 21, 225), rgb(96, 149, 235));
+}
+
+.crystalBall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myFortune {
+    justify-items: center;
+    text-align: center;
+}
+

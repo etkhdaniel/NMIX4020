@@ -4,12 +4,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IT=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Fortune Teller</title>
+        <!--CSS-->
+        <link href="fortune.css" rel="stylesheet">
     </head>
     <body>
-        <input type="text" id="namehere" placeholder="Your name here"><br>
-        <div id="result"></div>
-        <button onclick="fortune()">Your Fortune</button>
+        <div class="crystalBall">
+            <img src="crystal ball.gif">
+        </div>
+        <div class="myFortune">
+            <div id="result"></div>
+            <input type="text" id="namehere" placeholder="Your name here"><br>
+            <div id="result"></div>
+            <button onclick="fortune()">Your Fortune</button>
+        </div>
     </body>
 </html>
 <script>
