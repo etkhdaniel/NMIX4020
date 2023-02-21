@@ -3,7 +3,7 @@ let candidatePix = ["bush.jpg","carson.jpg","chafee.jpg","christie.jpg","cruz.jp
 
 let output = document.querySelector('#alsoRan');
 // output.innerHTML = candidateNames[candidateNames.length - 1];
-output.innerHTML = candidateNames[0]+ "<img src =pix/" + candidatePix[0] + ">";
+// output.innerHTML = candidateNames[0]+ "<img src =pix/" + candidatePix[0] + ">";
 for (var i = 0; i < candidateNames.length; i++) {
-    output.innerHTML += candidateNames[i]+"<br><im src=pix/"+candidatePix[i]+"><br>"
+    output.innerHTML += "<li><div>" + candidateNames[i] + "<br><img src=pix/" + candidatePix[i] + "><br></div>";
 }
