@@ -8,12 +8,12 @@ let candidatePix3 = ["perry.jpg","rubio.jpg","sanders.jpg","santorum.jpg","trump
 let output1 = document.querySelector('#out1');
 let output2 = document.querySelector('#out2');
 let output3 = document.querySelector('#out3');
-let s1Add = document.querySelector('#ss1Add');
-let s1Sub = document.querySelector('#ss1Sub');
-let s2Add = document.querySelector('#ss2Add');
-let s2Sub = document.querySelector('#ss2Sub');
-let s3Add = document.querySelector('#ss3Add');
-let s3Sub = document.querySelector('#ss3Sub');
+let add1 = document.querySelector('#add1');
+let sub1 = document.querySelector('#sub1');
+let add2 = document.querySelector('#add2');
+let sub2 = document.querySelector('#sub2');
+let add3 = document.querySelector('#add3');
+let sub3 = document.querySelector('#sub3');
 
 let i = 0;
 function canShow(plusMinus, arr1, arr2, output) {
@@ -25,21 +25,21 @@ function canShow(plusMinus, arr1, arr2, output) {
         i = arr1.length - 1;
     } //if
 } //canShow
-s1Add.onclick = function() {
+add1.onclick = function() {
     canShow(1, candidateNames1, candidatePix1, output1);
 } //onClick
-s1Sub.onclick = function() {
+sub1.onclick = function() {
     canShow(-1, candidateNames1, candidatePix1, output1);
 } //onClick
-s2Add.onclick = function() {
+add2.onclick = function() {
     canShow(1, candidateNames2, candidatePix2, output2);
     } //onClick
-s2Sub.onclick = function() {
+sub2.onclick = function() {
     canShow(-1, candidateNames2, candidatePix2, output2);
 } //onClick
-s3Add.onclick = function() {
+add3.onclick = function() {
     canShow(1, candidateNames3, candidatePix3, output3);
 } //onClick
-s3Sub.onclick = function() {
+sub3.onclick = function() {
     canShow(-1, candidateNames3, candidatePix3, output3);
 } //onClick
