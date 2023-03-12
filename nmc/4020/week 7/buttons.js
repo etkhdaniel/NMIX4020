@@ -16,11 +16,11 @@ let drinkObj = {
     
     let drinkArr = ["Coffee","Tea","Lemonade","Juice","Smoothie"];
     
-    let drink = document.querySelector('#drinks');
+    let drinks = document.querySelector('#drinks');
     let drinkImg = document.querySelector('#drinkImg');
     
     function drink(drink){
       let chooseDrink = " "
-      drink.innerHTML = chooseDrink + drinkObj[drink];
+      drinks.innerHTML = chooseDrink + drinkObj[drink];
       drinkImg.innerHTML = chooseDrink + "<img src=img/" + imgs[drink]+">";
     }
