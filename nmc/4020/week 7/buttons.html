@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html lang="">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Make an Object</title>
+      <style>
+        body {
+          font-family: sans-serif;
+          padding: 20px;
+        }
+  
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+        }
+  
+        button {
+          font-size: 16px;
+          line-height: 3;
+          width: 17%;
+        }
+      </style>
+  </head>
+  
+  <body>
+    
+      <h1>My Favorite Drinks</h1> 
+      <div>
+          <button onclick="drink('Coffee')">Coffee</button>
+          <button onclick="drink('Tea')">Tea</button>
+          <button onclick="drink('Lemonade')">Lemonade</button>
+          <button onclick="drink('Juice')">Juice</button>
+          <button onclick="drink('Smoothie')">Smoothie</button>
+      </div>
+      <div>
+          <div style="padding-right: 20px"><p id="drink"></p></div>
+          <div><p id="drinkImg"></p></div>
+      </div>
+  </body>
+  </html>
+  <script src="buttons.js"></script>
