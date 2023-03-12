@@ -22,5 +22,5 @@ let drinkObj = {
     function drink(drink){
       let chooseDrink = " "
       drinks.innerHTML = chooseDrink + drinkObj[drink];
-      drinkImg.innerHTML = chooseDrink + "<img src=/" + imgs[drink]+">";
+      drinkImg.innerHTML = chooseDrink + "<img src=" + imgs[drink]+">";
     }
