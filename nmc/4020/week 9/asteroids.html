@@ -3,10 +3,12 @@
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Make an Object</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <style>
-       
+        div {background-color: #000;}
       </style>
+      <title>Make an Object</title>
+     
   </head>
   
   <body>
@@ -16,13 +18,18 @@
 
     <p id="count"></p>
 
+    <div id="showData"></div>
   </body>
   <script>$( document ).ready(function() {
     $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=yF6JdIbOUfi2DRahQSDdkaXjE6mOMMh5FYnT0JCy', function(data) { 
         var howMany = data.near_earth_objects.length;
-        $('#count').html(howMany);
+        let dataSource = data.near_earth_objects;
+        for (var i=0; i < dataSource.length; i++) {
+            let maxWidth = dataSource[i].estimated_diameter.kilometers.estimated_diameter_max;
+            asteroidDisplay.innerHTML+="<div style='width: "+maxWidth+"px,height: "+maxWidth+"px'></div>";
+        } // for
     });
 });
 </script>
-  </html>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    let asteroidDisplay = document.querySelectory('body');
+</html>
