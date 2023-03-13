@@ -21,6 +21,7 @@
     <div id="showData"></div>
   </body>
   <script>$( document ).ready(function() {
+    let asteroidDisplay = document.querySelectory('body');
     $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=yF6JdIbOUfi2DRahQSDdkaXjE6mOMMh5FYnT0JCy', function(data) { 
         var howMany = data.near_earth_objects.length;
         let dataSource = data.near_earth_objects;
@@ -31,5 +32,5 @@
     });
 });
 </script>
-    let asteroidDisplay = document.querySelectory('body');
+
 </html>
