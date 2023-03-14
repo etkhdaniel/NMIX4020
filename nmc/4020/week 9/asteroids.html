@@ -1,66 +1,65 @@
-<!DOCTYPE html>
-  <html lang="">
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <style>
-        #outerBlack {
-            background-color: black;
-            border-radius: 50%;
-            float: left; 
-            margin: 10px;
-            display: flex;
-            justify-content: center;
-        }
 
-        #innerBlack {
-            background-color: grey;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #outer {
+            background-color: #000;
             border-radius: 50%;
-        }
-        
-        #outerRed {
-            background-color: red;
-            border-radius: 50%;
-            float: left;
+            float:left;
             margin: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: center; 
+            
+        }
+        #inner {
+            background-color: gray;
+            border-radius: 50%;
         }
 
         #innerRed {
-            background-color: pink;
+            background-color:pink;
             border-radius: 50%;
         }
-      </style>
-      <title>Make an Object</title>
-     
-  </head>
-  
-  <body>
+        #outerRed {
+            background-color: red;
+            border-radius: 50%;
+            float:left;
+            margin: 10px;
+            display: flex;
+            justify-content: center; 
+            
+        }
+
+    </style>
+    <title>Asteriods</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+    <p id="count"></p>
+    <div id="showData"></div>
     <div id="count"></div>
     <div id="astlist"></div>
-    <div id="showData"></div>
-    <p id="count"></p> 
-
-  </body>
-  <script></script>
-  let asteroidDisplay = document.querySelector('body');
-  $( document ).ready(function() {
-  $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=8ovWUEH8REfNVSzfKUnakT9GIPVjHtTDPC7bcwVQ', function(data) {
-      var howMany = data.near_earth_objects.length;
-      let dataSource = data.near_earth_objects;
-      for(var i=0; i<dataSource.length; i++) {
-          let maxWidth = (dataSource[i].estimated_diameter.kilometers.estimated_diameter_max) * 5;
-          let minWidth = (dataSource[i].estimated_diameter.kilometers.estimated_diameter_min) * 5;
-          if (dataSource[i].is_potentially_hazardous_asteroid == false) {
-          asteroidDisplay.innerHTML += "<div id='outerBlack' style='width:"+maxWidth+"px;height:"+maxWidth+"px'><div id='innerBlack'style='width:"+minWidth+"px;height:"+minWidth+"px'></div></div>";
-          } else {
-              asteroidDisplay.innerHTML += "<div id='outerRed' style='width:"+maxWidth+"px;height:"+maxWidth+"px'><div id='innerRed'style='width:"+minWidth+"px;height:"+minWidth+"px'></div></div>";
-          }
-      }
-   });
-  });  
-</script>
-
+</body>
 </html>
+<script>
+    let asteroidDisplay = document.querySelector('body');
+    $( document ).ready(function() {
+    $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=yF6JdIbOUfi2DRahQSDdkaXjE6mOMMh5FYnT0JCy', function(data) {
+        var howMany = data.near_earth_objects.length;
+        let dataSource = data.near_earth_objects;
+        for(var i=0;i<dataSource.length;i++) {
+            let maxWidth = (dataSource[i].estimated_diameter.kilometers.estimated_diameter_max) * 10;
+            let minWidth = (dataSource[i].estimated_diameter.kilometers.estimated_diameter_min) * 10;
+            if(dataSource[i].is_potentially_hazardous_asteroid == false) {
+            asteroidDisplay.innerHTML += "<div id='outer' style='width:"+maxWidth+"px;height:"+maxWidth+"px'><div id='inner'style='width:"+minWidth+"px;height:"+minWidth+"px'></div></div>";
+            } else {
+                asteroidDisplay.innerHTML += "<div id='outerRed' style='width:"+maxWidth+"px;height:"+maxWidth+"px'><div id='innerRed'style='width:"+minWidth+"px;height:"+minWidth+"px'></div></div>";
+            }
+        }
+     });
+    });   
+</script>
