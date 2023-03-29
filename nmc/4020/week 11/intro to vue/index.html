@@ -6,33 +6,47 @@
 -->
 <html>
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<title>Prologue by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Header -->
 			<div id="header">
+				var header = new Vue({
+					el: '#header',
+						data: {
+							yourName: 'Eva Daniel',
+							description: "I am a CS major at the University of Georgia",
+							linkOne: "Introduction",
+							link2: "My Portfolio",
+							link3: "About Me, OK??"
+							link4: "Contact",
+							link5: "my list"
+						}
+				})
 
 				<div class="top">
 
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">{{ name }}</h1>
-							<p>{{ description }}</p>
+							<h1 id="title">{{name}}</h1>
+							<p>{{description}}</p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">{{ linkOne }}</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">{{ link2 }}</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">{{ link3 }}</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">{{ link4 }}</span></a></li>
-								<li><a href="#list"><span class="icon solid fa-list">{{ link5 }}</span></a></li>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">{{linkOne}}</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">{{link2}}</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">{{link3}}</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">{{link4}}</span></a></li>
+								<li><a href="#list"><span class="icon solid fa-list">{{link5}}</span></a></li>
 							</ul>
 						</nav>
 
@@ -143,7 +157,12 @@
 
 						</div>
 					</section>
-
+				<!-- List -->
+				<section id ="list">
+					<div class="container">
+						<li><a href="#list"><span class="icon fa-list">{{link5}}</span></a></li>
+					</div>
+				</section>
 				<!-- Contact -->
 					<section id="contact" class="four">
 						<div class="container">
