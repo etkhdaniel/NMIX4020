@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Multiple Random Questions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+    
+    <style>
+
+        body{
+            align-items: center;
+        }
+
+        #answer{
+            color:red;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <button onclick="qa()">Load New Question Set</button>
+    <div id="mainDiv"></div>
+
+</body>
+</html>
+
+<script>
+      var mainDiv = document.querySelector("#mainDiv");
+    var theAnswer = [];
+
+    function qa(){
+        mainDiv.innerHTML = "";
+        $.getJSON('https://jservice.io/api/random?count=10', function(data) {
+            let j = 1;
+            for(let i = 0; i < 10; i++){
+                mainDiv.innerHTML += "<h3>" + j + ") Category: " + data[i].category.title + "</h3> <p> " + data[i].question + "</p>";
+                mainDiv.innerHTML += "<div id='damnAnswer" + i + "'></div>";
+                theAnswer.push(data[i].answer); 
+                mainDiv.innerHTML += "<button onclick='showAnswer("+ i + ")'> Load answer</button>";
+                j++;
+            } // for
+            
+            
+
+        });
+    } // qa
+
+    function showAnswer(b){
+        let whatever = document.querySelector("#damnAnswer" + b);
+        whatever.innerHTML = "<b id='answer'>" + theAnswer[b]+ "</b>";
+    } // showAnswer
+
+</script>
+</body>
+</html>
