@@ -1,0 +1,24 @@
+body,html {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#class {
+    background-color: rgb(35, 141, 221);
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 25px;
+    justify-content: space-evenly;
+}
+
+.student_container {
+    border-radius: 10px;
+    background-color: rgb(189, 231, 239);
+    display: block;
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 10px 10px 5px rgb(157, 183, 242);
+}

@@ -1,42 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="class.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 4</title>
-
-    <!--CSS-->
-    <style>
-
-    </style>
-
+    <title>Extracting Json Data</title>
 </head>
 <body>
-    
-    <h1 class="title">Project 4</h1> 
-
-    <button onclick="qa()">New Question</button>
-    <div id="category"></div>
-    <div id="question"></div><br>
-    <button onclick="showAnswer()">Show Answer</button><br>
-    <div id="answer"></div>
-
+    <div id="class"></div>
 </body>
-<script>
-
-    function person() {
-        $.getJSON('https://raw.githubusercontent.com/emuel/api/master/5110', function(data) {
-            stu_name.innerHTML = "First name: " + data[0].stu_name.title + "<br>";
-            last_name.innerHTML = "Last name: " + data[0].last_name;
-            student.innerHTML = "";
-            theStudent = data[0].student;
-        });
-    } // qa
-
-    function showStudent() {
-        student.innerHTML = theStudent; 
-    } // showAnswer
-
-</script>
 </html>
+<script src="class.js"></script>
