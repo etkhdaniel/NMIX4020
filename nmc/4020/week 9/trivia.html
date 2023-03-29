@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia!</title>
-
-    <!--CSS-->
+    
     <style>
+
         h1 {
             display: block;
             width: 80%;
@@ -20,14 +20,18 @@
         }
 
         #answer{
-            color:rgb(13, 215, 40); 
+            color:rgb(160, 0, 0); 
         }
+
     </style>
+
 
 </head>
 <body>
     
-    <h1 class="title">Random Trivia</h1> 
+    
+    <h1 class="title">Random Trivia</h1>
+    
 
     <button onclick="qa()">New Question</button>
     <div id="category"></div>
@@ -35,7 +39,10 @@
     <button onclick="showAnswer()">Show Answer</button><br>
     <div id="answer"></div>
 
+
 </body>
+</html>
+
 <script>
 
     var question = document.querySelector("#question");
@@ -50,11 +57,12 @@
             answer.innerHTML = "";
             theAnswer = data[0].answer;
         });
-    } // qa
+    } //qa
 
     function showAnswer() {
         answer.innerHTML = theAnswer; 
     } // showAnswer
 
 </script>
+</body>
 </html>
