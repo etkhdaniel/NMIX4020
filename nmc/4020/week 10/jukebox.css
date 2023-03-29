@@ -1,0 +1,36 @@
+html {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(56,255,246,.5) 70%, rgba(235,124,255,1) 100%);
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+}
+#instructions {
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    margin: 0 10%;
+}
+h2 {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+}
+audio {
+    width: 100%;
+}
+.box {
+    margin: 1%;
+    width: 15%;
+    border-radius: 25px;
+    padding: 1%;
+    background: rgb(235,124,255);
+    background: linear-gradient(0deg, rgba(235,124,255,1) 0%, rgba(255,250,145,1) 80%);
+}
+img {
+    max-width: 100%;
+    border-radius: 25px;
+}
