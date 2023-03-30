@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamboree Jukebox</title>
+    <link rel="stylesheet" href="jukebox.css"/>
+<body>
+
+    <section>
+
+    <h1 style="text-align: center">My Heavy Rotation</h1>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/split.jpeg" style="width:100%">
+            <h2>Split - NIKI</h2>
+            <button onclick="player('m4a/niki_split.m4a')">Play Song</button> 
+        </div>
+      
+        <div class="column">
+            <img src="images/slow.jpeg" style="width:100%">
+            <h2>Slow - SOLE</h2>
+            <p><button onclick="player('m4a/sole_slow.m4a')">Play Song</button></p>
+        </div>
+      
+        <div class="column">
+            <img src="images/night dancer.jpeg" style="width:100%">
+            <h2>NIGHT DANCER - imase</h2>
+            <p><button onclick="player('m4a/imase_night.m4a')">Play Song</button></p>
+        </div>
+    
+        <div class="column">
+            <img src="images/comethru.jpeg" style="width:100%">
+            <h2>comethru - Jeremy Zucker</h2>
+            <p><button onclick="player('m4a/comethru.m4a')">Play Song</button></p>
+        </div>
+
+        <div class="column">
+            <img src="images/oceans & engines.jpeg" style="width:100%">
+            <h2>Oceans & Engines - NIKI</h2>
+            <p><button onclick="player('m4a/oceans.m4a')">Play Song</button></p>
+        </div>
+
+      </div>
+
+      <div id="juke"></div>
+
+    </section>
+
+</body>
+<script src="jukebox.js"></script>
