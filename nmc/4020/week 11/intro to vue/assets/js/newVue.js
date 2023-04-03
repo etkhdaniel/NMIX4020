@@ -10,3 +10,22 @@ var header = new Vue ({
         link5: "my list"
     }
 })
+
+var portfolio = new Vue ({
+    el: '#portfolio',
+    data: {
+        portfolioTitle: "I don't currently have anything for my portfolio so here are some pictures of some dinosaurs.",
+        image1: "images/triceretops.jpeg",
+        imgText1: "Triceretops",
+        image2: "images/velociraptor.jpeg",
+        imgText2: "Velociraptor",
+        image3: "images/allosaurus.jpeg",
+        imgText3: "Allosaurus",
+        image4: "images/microraptor",
+        imgText4: "Microraptor",
+        image5: "images/elasmosaurus.jpeg",
+        imgText5: "Elasmosaurus",
+        image6: "images/pterodactyl.jpeg",
+        imgText6: "Pterodactyl"
+    }
+})
