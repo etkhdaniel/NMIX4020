@@ -81,7 +81,7 @@
 								<h2>My Favorite Dinosaurs</h2>
 							</header>
 
-							<p>I don't really have any portofio items right now, so here are some pictures of dinosaurs!</p>
+							<p>{{text}}</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
@@ -136,12 +136,10 @@
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>{{text}}</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>I am a CS student and am an incoming 2023 Technology Summer Intern for Morgan Stanley.</p>
+							<a href="#" class="image featured"><img src="avatar" alt="" /></a>
 
 						</div>
 					</section>
@@ -149,6 +147,7 @@
 				<!-- List -->
 				<section id ="list">
 					<div class="container">
+						<h2>My favorite Athens restaurants</h2>
 						<li><a href="#list"><span class="icon fa-list">{{link5}}</span></a></li>
 						<ul>
 							<li v-for="favorite in favorites">{{favorite}}</li>
@@ -156,13 +155,29 @@
 					</div>
 				</section>
 
+				<!-- Conditional -->
+				<section id ="conditional">
+					<div class="container">
+						<!-- Input v-model -->
+						<p v-on:click="teacherName='John">John</p>
+						<p v-on:click="teacherName='Emuel">Emuel</p>
+
+						<p v-if="teacherName == 'Emuel' ">Correct. The teacher's name is {{teacherName}}</p><br>
+						<p v-if="teacherName == 'John' ">Not yet. The teacher's name is NOT {{teacherName}}</p>
+					</div>
+				</section>
+
 				<!-- Color -->
 				<section id ="function">
 					<div class="container">
-						<div id="divtest" :style="{backgroundColor: bgColor}"></div>
-						<p v-for="color in colors" @mouseover=changeColor(color)>{{color}}</p>
+						<header>
+							<h2>{{bgColor}}</h2>
+							<div id="divtest" :style="{backgroundColor: bgColor}"></div>
+							<p v-for="color in colors" @mouseover=changeColor(color)>{{color}}</p>
+						</header>
 					</div>
 				</section>
+
 				<!-- Contact -->
 					<section id="contact" class="four">
 						<div class="container">
@@ -171,7 +186,7 @@
 								<h2>Contact</h2>
 							</header>
 
-							<p>If you would like to contact me, fill out the form below!</p>
+							<p>{{text}}</p>
 
 							<form method="post" action="#">
 								<div class="row">

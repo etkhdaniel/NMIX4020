@@ -14,9 +14,9 @@ var header = new Vue ({
 var intro = new Vue ({
     el: '#top',
     data: {
-        name: 'Eva',
-        major: 'Computer Science',
-        UGA: 'University of Georgia'
+        name: "Eva",
+        major: "Computer Science",
+        UGA: "University of Georgia"
     }
 })
 
@@ -35,13 +35,13 @@ var portfolio = new Vue ({
         image5: "images/elasmosaurus.jpeg",
         imgText5: "Elasmosaurus",
         image6: "images/pterodactyl.jpeg",
-        imgText6: "Pterodactyl"
+        imgText6: "Pterodactyl",
     }
 })
 
 var list = new Vue ({
     el: '#list',
-    link5: 'My favorite Athens restaurants: ',
+    link5: "My favorite Athens restaurants: ",
     data: {
         favorites: ['Last Resort', 'Hook & Reel', 'Marker7', 'Cali \'n Tito\'s', 'Bubble Cafe']
     }
@@ -57,5 +57,19 @@ var getcolor = new Vue ({
         changeColor(color) {
             this.bgColor = color
         }
+    }
+})
+
+var conditional = new Vue ({
+    el: '#conditional',
+    data: {
+        teacherName: ""
+    }
+})
+
+var contact = new Vue ({
+    el: '#contact',
+    data: {
+        text: "Please do NOT contact me :("
     }
 })
