@@ -7,7 +7,7 @@
 <html>
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<title>Prologue by HTML5 UP</title>
+		<title>Intro to Vue</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -67,7 +67,7 @@
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Some Dinos</a>
+								<a href="#portfolio" class="button scrolly">Find Out More</a>
 							</footer>
 
 						</div>
@@ -81,18 +81,18 @@
 								<h2>My Favorite Dinosaurs</h2>
 							</header>
 
-							<p>{{text}}</p>
+							<p>{{description}}</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/triceretops.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image1" alt="" /></a>
 										<header>
 											<h3>{{imgText1}}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/velociraptor.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image2" alt="" /></a>
 										<header>
 											<h3>{{imgText2}}</h3>
 										</header>
@@ -100,13 +100,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/allosaurus.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image3" alt="" /></a>
 										<header>
 											<h3>{{imgText3}}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/microraptor.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image4" alt="" /></a>
 										<header>
 											<h3>{{imgText4}}</h3>
 										</header>
@@ -114,13 +114,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/elasmosaurus.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image5" alt="" /></a>
 										<header>
 											<h3>{{imgText5}}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pterodactyl.jpeg" alt="" /></a>
+										<a href="#" class="image fit"><img src="image6" alt="" /></a>
 										<header>
 											<h3>{{imgText6}}</h3>
 										</header>
@@ -136,7 +136,7 @@
 						<div class="container">
 
 							<header>
-								<h2>{{text}}</h2>
+								<h2>{{description}}</h2>
 							</header>
 
 							<a href="#" class="image featured"><img src="avatar" alt="" /></a>
@@ -147,8 +147,7 @@
 				<!-- List -->
 				<section id ="list">
 					<div class="container">
-						<h2>My favorite Athens restaurants</h2>
-						<li><a href="#list"><span class="icon fa-list">{{link5}}</span></a></li>
+						<h2>My Favorite Athens Restaurants</h2>
 						<ul>
 							<li v-for="favorite in favorites">{{favorite}}</li>
 						</ul>
@@ -159,11 +158,19 @@
 				<section id ="conditional">
 					<div class="container">
 						<!-- Input v-model -->
-						<p v-on:click="teacherName='John">John</p>
-						<p v-on:click="teacherName='Emuel">Emuel</p>
+						What is the name of your teacher? <!-- <input v-model="teacherName"> -->
+						<p v-on:click="teacherName='John'">John</p>
+						<p v-on:click="teacherName='Emuel'">Emuel</p>
+						<p v-on:click="teacherName='Megan'">Megan</p>
+						<p v-on:click="teacherName='Chris'">Chris</p>
+						<p v-on:click="teacherName='Leah'">Leah</p>
 
 						<p v-if="teacherName == 'Emuel' ">Correct. The teacher's name is {{teacherName}}</p><br>
-						<p v-if="teacherName == 'John' ">Not yet. The teacher's name is NOT {{teacherName}}</p>
+						<p v-if="teacherName != 'Emuel' ">Not yet. Keep Trying</p>
+
+						How many horns does a Triceretops have? <input v-model="hornNumber">
+						<p v-if="hornNumber == '3' || hornNumber == 'three' || hornNumber == 'Three'">Correct. A Triceretops has 3 horns.</p>
+						<p v-if="hornNumber != '3' || hornNumber != 'three' || hornNumber == 'Three'">Nope. Try again</p>
 					</div>
 				</section>
 
