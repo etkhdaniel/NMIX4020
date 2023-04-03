@@ -46,3 +46,16 @@ var list = new Vue ({
         favorites: ['Last Resort', 'Hook & Reel', 'Marker7', 'Cali \'n Tito\'s', 'Bubble Cafe']
     }
 })
+
+var getcolor = new Vue ({
+    el: '#function',
+    data: {
+        bgColor: '',
+        colors: ['red', 'green', 'blue']
+    },
+    methods: {
+        changeColor(color) {
+            this.bgColor = color
+        }
+    }
+})
