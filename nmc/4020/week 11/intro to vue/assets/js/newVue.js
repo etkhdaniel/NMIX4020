@@ -23,7 +23,8 @@ var intro = new Vue ({
 var portfolio = new Vue ({
     el: '#portfolio',
     data: {
-        portfolioTitle: "I don't currently have anything for my portfolio so here are some pictures of some dinosaurs.",
+        description: "I don't current have anything for my portfolio so here are some pictures of dinosaurs.",
+        portfolioTitle: "Eva's Portfolio",
         image1: "images/triceretops.jpeg",
         imgText1: "Triceretops",
         image2: "images/velociraptor.jpeg",
@@ -36,6 +37,15 @@ var portfolio = new Vue ({
         imgText5: "Elasmosaurus",
         image6: "images/pterodactyl.jpeg",
         imgText6: "Pterodactyl",
+    }
+})
+
+var about = new Vue ({
+    el: '#about',
+    data: {
+        header: 'About',
+        img: "images/pic08.jpg",
+        description: "Eva is a Computer Science student at the University of Georgia."
     }
 })
 
@@ -63,9 +73,12 @@ var getcolor = new Vue ({
 var conditional = new Vue ({
     el: '#conditional',
     data: {
-        teacherName: ""
+        teacherName: "",
+        hornNumber: ""
     }
 })
+
+
 
 var contact = new Vue ({
     el: '#contact',
