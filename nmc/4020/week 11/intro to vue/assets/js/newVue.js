@@ -11,6 +11,15 @@ var header = new Vue ({
     }
 })
 
+var intro = new Vue ({
+    el: '#top',
+    data: {
+        name: 'Eva',
+        major: 'Computer Science',
+        UGA: 'University of Georgia'
+    }
+})
+
 var portfolio = new Vue ({
     el: '#portfolio',
     data: {
