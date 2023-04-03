@@ -43,6 +43,6 @@ var list = new Vue ({
     el: '#list',
     link5: 'My favorite Athens restaurants: ',
     data: {
-        favorites: ['Last Resort', 'Hook & Reel', 'Marker7', 'Cali \'n Tito\'s']
+        favorites: ['Last Resort', 'Hook & Reel', 'Marker7', 'Cali \'n Tito\'s', 'Bubble Cafe']
     }
 })
