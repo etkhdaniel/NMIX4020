@@ -44,7 +44,7 @@ var about = new Vue ({
     el: '#about',
     data: {
         header: 'About',
-        img: "images/pic08.jpg",
+        avatar: "images/ecv.jpeg",
         description: "Eva is a Computer Science student at the University of Georgia."
     }
 })
