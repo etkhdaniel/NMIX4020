@@ -61,11 +61,15 @@ var getcolor = new Vue ({
     el: '#function',
     data: {
         bgColor: '',
-        colors: ['red', 'green', 'blue']
+        colors: ['red', 'green', 'blue'],
+        widths: ['400px', '500px', '600px']
     },
     methods: {
         changeColor(color) {
             this.bgColor = color
+        },
+        changeWidth(width) {
+            this.w = width
         }
     }
 })
