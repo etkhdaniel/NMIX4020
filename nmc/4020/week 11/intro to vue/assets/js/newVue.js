@@ -43,7 +43,7 @@ var portfolio = new Vue ({
 var about = new Vue ({
     el: '#about',
     data: {
-        header: 'About',
+        header: "About",
         avatar: "images/ecv.jpeg",
         description: "Eva is a Computer Science student at the University of Georgia."
     }
