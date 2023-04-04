@@ -2,12 +2,12 @@ var header = new Vue ({
     el: '#header',
     data: {
         yourName: 'Eva Daniel',
-        description: "I am a CS major",
+        description: "Student",
         linkOne: "Introduction",
         link2: "My Portfolio",
         link3: "About Me, OK??",
-        link4: "Contact",
-        link5: "my list"
+        link4: "My List",
+		link5: "Contact"
     }
 })
 
@@ -31,7 +31,7 @@ var portfolio = new Vue ({
         imgText2: "Velociraptor",
         image3: "images/allosaurus.jpeg",
         imgText3: "Allosaurus",
-        image4: "images/microraptor",
+        image4: "images/microraptor.jpeg",
         imgText4: "Microraptor",
         image5: "images/elasmosaurus.jpeg",
         imgText5: "Elasmosaurus",
