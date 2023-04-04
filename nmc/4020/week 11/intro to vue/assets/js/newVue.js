@@ -7,7 +7,8 @@ var header = new Vue ({
         link2: "My Portfolio",
         link3: "About Me, OK??",
         link4: "My List",
-		link5: "Contact"
+		link5: "Contact",
+        avatar: "images/me.jpg"
     }
 })
 
