@@ -177,7 +177,7 @@
 
 				<!-- Color -->
 				<section id ="function">
-					<div id="colors" style="width:300px;height:300px;float:left;" :stype="{backgroundColor: bgColor, width: w}"></div>
+					<div id="colors" style="width:300px;height:300px;float:left;" :style="{backgroundColor: bgColor, width: w}"></div>
 					<p v-for="color in colors" @mouseover=changeColor(color)>{{color}}</p>
 					<p v-for="width in widths" @mouseover=changeWidth(width)>{{width}}</p>
 				</section>
