@@ -15,8 +15,9 @@
   <body>
     <div id="us">
       <div v-for="each in yall">
-        <h2>{{each.stu_name}}</h2>
         <h2 :style="{backgroundColor:bgColor}"></h2>
+        <h2>{{each.stu_name}}</h2>
+      
         <p>{{each.fact}}</p>
         <img :src="dompart1+each.domain+dompart2" />
       </div>
