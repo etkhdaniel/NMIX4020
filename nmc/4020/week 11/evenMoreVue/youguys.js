@@ -7,6 +7,7 @@ var studentdata = new Vue({
         oswald: "nothing yet",
         dompart1: "http://",
         dompart2: "/images/me.jpg",
+        bgColor: "red",
         yall: [{
                 "stu_name": "Lise",
                 "last_name": "Xu",
