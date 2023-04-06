@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Even More Vue</title>
     <style>
-      img {width: 300px
+      img{width: 300px;}
+      .nineStyle {
+        background-color: black;
+        width: 400px;
+        color: white;
       }
-      .nineStyle {background-color: black; width: 400px; color: white;}
-      .elevenStyle {background-color: red; width: 400px;}
+      .elevenStyle {
+        background-color: red;
+        width: 400px;
+      }
     </style>
   </head>
   <body>
     <div id="us">
       <h1>{{title}}</h1>
-      <div v-for="each in yall" 
-        :class="{ninestyle: each.section == '910', elevenstyle: each.section == '1130'}">
-        <h2 :style="[divStructure, divText]">{{eachStudent.stu_name}} {{eachStudent.last_name}}</h2>
-        <p 
-        :class="{shortFact: eachStudent.fact.length >= 30, longFact: eachStudent.fact.length < 30}">{{eachStudent.fact}}</p>
-        <img :src="dompart1+eachStudent.domain+dompart2">
+      <div v-for="each in yall" :class="{nineStyle: each-section == '910', elevenStyle: each.section == '1130'}">
+        <h2>{{each.stu_name}}</h2>
+        <p>{{each.fact}}</p>
+        <img :src="dompart1+each.domain+dompart2" />
       </div>
     </div>
   </body>
