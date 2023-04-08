@@ -30,9 +30,9 @@
   <body>
     <div id="us">
       <h1>{{title}}</h1>
-      <div v-for="each in yall" 
-        :class="{nineStyle: each-section == '910', elevenStyle: each.section == '1130'}">
-        <h2 :style="[divStructure, divText]">{{eachStudent.stu_name}} {{eachStudent.last_name}}</h2>
+      <div v-for="eachStudent in yall" 
+        :class="{nineStyle: eachStudent.section == '910', elevenStyle: eachStudent.section == '1130'}">
+        <h2 :style="[divStructure, divText]">{{eachStudent.stu_name}} {{eachSudent.last_name}}</h2>
         <p
             :class="{shortFact: eachStudent.fact.length >= 30, longFact: eachStudent.fact.length < 30}"
             >{{eachStudent.fact}}</p>
