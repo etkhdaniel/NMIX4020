@@ -9,6 +9,7 @@ $(document).ready(function(){
     var autoChopperPrice = 100;
     var pickaxePrice = 50;
     var logPrice = 1;
+    var stonePrice = 3;
     var menu;
 
     setInterval(function(){
