@@ -10,6 +10,7 @@
       img {
         width: 300px;
       }
+
       .nineStyle {
         background-color: black;
         width: 400px;
@@ -19,27 +20,19 @@
         background-color: red;
         width: 400px;
       }
-      .shortFact {
-        color: pink
-      }
-      .longFact {
-        color: aqua
-      }
     </style>
   </head>
   <body>
-    <div id="us">
+    <div id="us" :style ="[divStructure, divText]">
       <h1>{{title}}</h1>
       <div v-for="eachStudent in yall" 
         :class="{nineStyle: eachStudent.section == '910', elevenStyle: eachStudent.section == '1130'}">
-        <h2 :style="[divStructure, divText]">{{eachStudent.stu_name}} {{eachSudent.last_name}}</h2>
-        <p
-            :class="{shortFact: eachStudent.fact.length >= 30, longFact: eachStudent.fact.length < 30}"
-            >{{eachStudent.fact}}</p>
+        <h2>{{eachStudent.stu_name}} {{eachStudent.last_name}}</h2>
         <p>{{eachStudent.fact}}</p>
-        <img :src="dompart1+each.domain+dompart2" />
+        <img :src="dompart1+eachStudent.domain+dompart2" />
       </div>
     </div>
   </body>
 </html>
 <script src="youguys.js"></script>
+
