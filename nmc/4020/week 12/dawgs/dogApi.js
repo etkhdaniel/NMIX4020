@@ -5,30 +5,21 @@ new Vue({
 
         return {
             info: null,
-            moreData: [],
-            imgMaker: [],
-            whichDawg: "",
-            selector: 0
-        
+            moreData: []
         }
     },
     mounted: function mounted() {
-        this.showme('cocker')
+        this.showme()
 
     },
 
     methods: {
-    async    showme(index) {
-    await    axios
+        async    showme(index) {
+            await    axios
                 .get('https://dog.ceo/api/breed/spaniel/'+index+'/images')
                 .then(response => (this.info = response.data));
-        console.log(this.info.message)
-        this.moreData = this.info.message;
-        this.slider()
-        },
-        slider() {
-            this.whichDawg = this.moreData[this.selector];
-            this.selector++;
+            console.log(this.info.message)
+            this.moreData = this.info.message;
         }
     }
 })
