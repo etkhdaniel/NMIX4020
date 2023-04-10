@@ -19,15 +19,17 @@
     <div id="us">
         <div id="container">
             <ul>
-                <li  v-for="(eachStudent,index) in yall" @mouseover="showImage(index)">
+                <li  v-for="(eachStudent, index) in yall"  @mouseover="showImage(index)">
                     {{eachStudent.stu_name}} {{eachStudent.last_name}}</li>
             </ul>
         </div><br>
-        <img :src="image" />
+        <img :src="image"/>
+        <p>{{quote}}</p>
     </div>
 </body>
 </html>
 <script src="youguys.js"></script>
+
 
 
 

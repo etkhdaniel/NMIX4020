@@ -5,7 +5,7 @@ var studentdata = new Vue({
         stuname: "",
         counter: 0,
         oswald: "nothing yet",
-        yall: yall [{
+        yall: [{
                 "stu_name": "Lise",
                 "last_name": "Xu",
                 "domain": "lizmxu.com\/nmc\/4020",
@@ -246,10 +246,6 @@ var studentdata = new Vue({
                 "counter": "176"
             }
         ]
-
-
-
-
     },
     methods: {
         showImage(index) {
@@ -257,7 +253,11 @@ var studentdata = new Vue({
         }
     },
     computed: {
-        image() {return
-        "http://"+this.yall[this.counter].domain+"/images/me.jpg";}
+        image() {
+            return "http://" + this.yall[this.counter].domain+"/images/me.jpg";
+        },
+        quote() {
+            return this.yall[this.counter].fact;
+        }
     }
 })
