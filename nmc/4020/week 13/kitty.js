@@ -3,7 +3,6 @@ new Vue({
     el: '#app',
     data: {
         catArray: [],
-        breeds: [],
         dpart1:"https://cdn2.thecatapi.com/images/",
         dpart2:".jpg"
     },
@@ -18,7 +17,9 @@ new Vue({
                 this.catArray = response.data;
                 for (i = 0; i < this.catArray.length; i++) {
                     let catObj = this.catArray[i].image;
-                    catObj.name = this.catArray[i].name
+                    catObj.name = this.catArray[i].name;
+                    catObj.description = this.catArray[i].description;
+                    catObj.temperament = this.catArray[i].temperament;
                     this.breeds.push(catObj);
                 } // for
             } catch (err) {

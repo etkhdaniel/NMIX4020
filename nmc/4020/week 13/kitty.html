@@ -6,14 +6,27 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Cat Stuff</title>
+    <style>
+        #app {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #cat {
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
-        <div v-for="eachCat in catArray">
+        <div id="cat" v-for="eachCat in catArray">
             <p>{{eachCat.name}}</p>
+            <p>{{eachCat.description}}</p>
+            <p>Temperment: {{eachCat.temperment}}</p>
+            <p></p>
         <img :src="eachCat.url">
         </div>
+        <img style-="height: 200px" :src= domain1+eachCat.reference_image_id+domain2>
     </div>
 </body>
 
