@@ -11,12 +11,42 @@
 </head>
 
 <body>
-    <div id="bobcat">
+    <div id="buttons">
         <h2>{{thename}}</h2>
         <h2>Adaptability Score: {{adapt}}</h2>
+        <h2>Health Issues: {{hissue}}</h2>
+        <h2>Grooming: {{groom}}</h2>
+        <h2>Child Friendly: {{cfriend}}</h2>
+        <h2>Energy Level: {{energy}}</h2>
         <button v-on:click="slideshow()">Abyssinian</button><br><br>
-   
+        <button v-on:click="slideshow()">American Bobtail</button><br><br>
+        <button v-on:click="slideshow()">Bengal</button><br><br>
+        <button v-on:click="slideshow()">LaPerm</button><br><br>
+        <button v-on:click="slideshow()">York Chocolate</button><br><br>
         <img :src="image.url"><br>
+    </div>
+
+    <div id="breed">
+
+        <div id="abys" class = "bigdiv">
+            <cat whichcat="abys"></cat>
+        </div>
+
+        <div id="abob" class = "bigdiv">
+            <cat whichcat="abob"></cat>
+        </div>
+
+        <div id="beng" class = "bigdiv">
+            <cat whichcat="beng"></cat>
+        </div>
+
+        <div id="lape" class = "bigdiv">
+            <cat whichcat="lape"></cat>
+        </div>
+
+        <div id="ycho" class = "bigdiv">
+            <cat whichcat="ycho"></cat>
+        </div>
     </div>
 
 

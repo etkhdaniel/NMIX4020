@@ -2,7 +2,7 @@ new Vue({
     el: '#bobcat',
     data: {
         image: "",
-        whichcat: "abys",
+        whichcat: ["abys", "abob", "beng", "lape", "ycho"],
         thename: "",
         allofit: [],
         i: 0,
@@ -27,7 +27,12 @@ new Vue({
 //response2 is a new variable that uses the id to get data from a URL with additional information
   let response2 = await axios.get('https://api.thecatapi.com/v1/images/' + theid, {})
       this.adapt = response2.data.breeds[0].adaptability;
+      this.hissues = response2.data.breeds[0].health_issues;
+      this.groom = response2.data.breeds[0].grooming;
+      this.cfriend = response2.data.breeds[0].child_friendly;
+      this.energy = response2.data.breeds[0].energy_level;
    this.thename = response2.data.breeds[0].name;
+   
     this.allofit = response.data;
             } catch (err) {
                 console.log(err)
