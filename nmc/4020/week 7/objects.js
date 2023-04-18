@@ -20,21 +20,23 @@ let classObject = {"AlexW": "I am the oldest of two boys, two girls; two redhead
  
 let nameArray =["AlexW","AlexC","Allison","Amy","Andrea","AnnaGrace","Brandon","Cydney","Elizabeth","Grant","Haleigh","Hua","Jenny","Kaitlyn","McKenzie ","Melissa","Morgan","Niambi","Tyler"];
 
- let nameList = document.querySelector('#aname');
+let nameList = document.querySelector('#aname');
 
- for (i=0; i<nameArray.length; i++) {
-    nameList.innerHTML += "<option value="+nameArray[i]+">"+nameArray[i]+"</option>";
- } 
+let picList = document.querySelector('#image');
+
+for (i=0; i < nameArray.length; i++) {
+    nameList.innerHTML += "<option value="+nameArray[i]+">"+nameArray[i]+"</option";
+}
 
 
 function quote(){
-  let sName = document.querySelector('#aname').value;
-  document.querySelector('#aboutme').innerHTML = classObject[sName];
+    let sName = document.querySelector('#aname').value;
+    if (classObject.hasOwnProperty(sName)==true) {
+        document.querySelector('#aboutme').innerHTML = classObject[sName];
+        picList.innerHTML = "<img src= pix/" + sName + ".jpg>";
+    } else {
+        document.querySelector('#aboutme').innerHTML = sName + " is not in the class";
 
-  if (classObject.hasOwnProperty(sName)==true) {
-    document.querySelector('#aboutme').innerHTML = classObject[sName];
+    }
 
-    document.querySelector('#image').innerHTML = "<img src=pix/"+sName+".jpg>";
-  }
-  else document.querySelector('#aboutme').innerHTML = sName+" is not in the class";
 }
