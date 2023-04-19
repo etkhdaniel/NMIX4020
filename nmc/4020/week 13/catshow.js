@@ -26,12 +26,9 @@ new Vue({
      let theid = response.data[0].id;
 //response2 is a new variable that uses the id to get data from a URL with additional information
   let response2 = await axios.get('https://api.thecatapi.com/v1/images/' + theid, {})
+      this.desc = response2.data.breeds[0].description; 
       this.temp = response2.data.breeds[0].temperment;
-      this.adapt = response2.data.breeds[0].adaptability;
-      this.hissues = response2.data.breeds[0].health_issues;
-      this.groom = response2.data.breeds[0].grooming;
-      this.cfriend = response2.data.breeds[0].child_friendly;
-      this.energy = response2.data.breeds[0].energy_level;
+      this.origin = response2.data.breeds[0].origin;
    this.thename = response2.data.breeds[0].name;
    
     this.allofit = response.data;
