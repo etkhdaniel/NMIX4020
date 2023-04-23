@@ -10,9 +10,9 @@ Vue.component('cat', {
             <p>{{temperament}}</p>
             <h2>Adaptability Score: {{adapt}}</h2>
             <div style = "{width: '200px', backgroundColor: '#B1AE91', justifyContent: 'center'}">
-                <div :style = "{width: affection_level * 100 + 'px', backgroundColor: '#95bf8f', borderRadius: '1px', borderStyle: 'solid', borderColor: '#C96480', margin: '2px'}">Affection Level</div>
-                <div :style = "{width: child_friendly * 100 + 'px', backgroundColor: '#C96480', borderRadius: '1px', borderStyle: 'solid', borderColor: '#95bf8f', margin: '2px'}">Child-Friendly</div>
-                <div :style = "{width: dog_friendly * 100 + 'px', backgroundColor: '#95bf8f', borderRadius: '1px', borderStyle: 'solid', borderColor: '#C96480', margin: '2px'}">Dog-Friendly</div>
+                <div :style = "{width: affection_level * 100 + 'px', backgroundColor: '#90e0ef', borderRadius: '1px', borderStyle: 'solid', borderColor: '#90e0ef', margin: '2px'}">Affection Level</div>
+                <div :style = "{width: child_friendly * 100 + 'px', backgroundColor: '#00b4d8', borderRadius: '1px', borderStyle: 'solid', borderColor: '#00b4d8', margin: '2px'}">Child-Friendly</div>
+                <div :style = "{width: dog_friendly * 100 + 'px', backgroundColor: '#0077b6', borderRadius: '1px', borderStyle: 'solid', borderColor: '#0077b6', margin: '2px'}">Dog-Friendly</div>
             </div>
             <button v-on:click="slideshow">slideshow</button>
             <img :src="image.url">
