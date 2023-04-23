@@ -1,49 +1,61 @@
 <!DOCTYPE html>
-<html lang="">
-
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Project 6: Cat Components</title>
-    <style>
-        img {width: 500px;}
-        button{width: 80px; background-color: grey;color:white;padding: 8px;border-radius: 12px;border: solid black 4px;} </style>
-</head>
-
-<body>
-    <div id="bobcat">
-        <h2>{{thename}}</h2>
-        <h2>Description: {{desc}}</h2>
-        <h2>Temperament: {{temperament}}</h2>
-        <h2>Origin: {{origin}}</h2>
-        <button v-on:click="slideshow()">Abyssinian</button><br><br>
-        <img :src="image.url"><br>
-    </div>
-
-    <div id="breed">
-
-        <div id="abys" class = "bigdiv">
-            <cat whichcat="abys"></cat>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Component</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <style>
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0px;
+            }
+            img {width: 500px;}
+            button{width: 80px; background-color: grey;color:white;padding: 8px;border-radius: 12px;border: solid black 4px; margin: 6px;} 
+            #cats {
+                background-color: #d49190;
+                display: flex;
+                flex-direction: column;
+            }
+            #eachCat {
+                background-color: #B47978;
+                margin: 10px;
+                text-align: center;
+                padding: 15px;
+                border-radius: 20px;
+            }
+            #name {
+                background-color: #95bf8f;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cats">
+            <div id="eachCat">
+                <cat whichcat ="abob"></cat>
+            </div>
+            <div id="eachCat">
+                <cat whichcat ="abys"></cat>
+            </div>
+            <div id="eachCat">
+                <cat whichcat ="emau"></cat>
+            </div>
+            <div id="eachCat">
+                <cat whichcat ="jbob"></cat>
+            </div>
+            <div id="eachCat">
+                <cat whichcat ="manx"></cat>
+            </div>
+            <div>
+                <h3>
+                    How it Works:
+                </h3>
+                <p>
+                </p>
+            </div>
         </div>
-
-        <div id="abob" class = "bigdiv">
-            <cat whichcat="abob"></cat>
-        </div>
-
-        <div id="beng" class = "bigdiv">
-            <cat whichcat="beng"></cat>
-        </div>
-
-        <div id="lape" class = "bigdiv">
-            <cat whichcat="lape"></cat>
-        </div>
-
-        <div id="ycho" class = "bigdiv">
-            <cat whichcat="ycho"></cat>
-        </div>
-    </div>
-
-
-</body>
+    </body>
     <script src="catshow.js"></script>
 </html>
