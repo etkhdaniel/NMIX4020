@@ -1,32 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Cat Stuff</title>
+    <title>Cat API</title>
     <style>
+        body{
+            background-color: #fdf5e2;
+        }
+
+        img {
+            align-content: center; 
+            width: 250px;
+            border-color: #165a94;
+        }
+
+        h1 {
+            text-align: center; 
+        }
+
         #app {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
-        #cat {
-            text-align: left;
+
+        #cats { 
+            text-align: center; 
+            background-color: #cea18b;
+            color: black;
+            border: 5px solid #fdf5e2; 
+            outline: 5px solid #fdf5e2;
+            outline-offset: -20px;
+            width: 300px;
+            padding: 40px;
+            margin: 15px; 
         }
     </style>
 </head>
 
 <body>
+    <h1>The Cat API</h1>
     <div id="app">
-        <div id="cat" v-for="eachCat in catArray">
-            <p>{{eachCat.name}}</p>
-            <p>{{eachCat.description}}</p>
-            <p>Temperment: {{eachCat.temperment}}</p>
-            <p></p>
-        <img :src="eachCat.url">
+        <div v-for="eachCat in catArray" id="cats">
+            <h2>{{ eachCat.name }}</h2>
+            <img :src= dpart1+eachCat.reference_image_id+dpart2>
+            <h3>Origin</h3>
+                <p>{{ eachCat.origin }}</p>
+            <h3>Description</h3>
+                <p>{{ eachCat.description }}</p>
+            <h3>Temperament</h3>
+            <p>{{ eachCat.temperament }}</p>
         </div>
-        <img style-="height: 200px" :src= domain1+eachCat.reference_image_id+domain2>
+
     </div>
 </body>
 
