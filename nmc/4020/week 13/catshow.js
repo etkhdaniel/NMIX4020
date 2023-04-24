@@ -13,6 +13,7 @@ Vue.component('cat', {
                 <div :style = "{width: energy_level * 100 + 'px', backgroundColor: '#90e0ef', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Energy Level</div>
                 <div :style = "{width: child_friendly * 100 + 'px', backgroundColor: '#00b4d8', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Child-Friendly</div>
                 <div :style = "{width: dog_friendly * 100 + 'px', backgroundColor: '#0077b6', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Dog-Friendly</div>
+                <div :style = "{width: grooming * 100 + 'px', backgroundColor: '#52b2bf', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Grooming</div>
             </div>
             <button v-on:click="slideshow">slideshow</button>
             <img :src="image.url">
@@ -29,7 +30,8 @@ Vue.component('cat', {
                 temperament: "",
                 energy_level: "",
                 child_friendly: "",
-                dog_friendly: ""
+                dog_friendly: "",
+                grooming: ""
             }
         },
     created() {
@@ -58,6 +60,7 @@ Vue.component('cat', {
         this.energy_level = response2.data.breeds[0].affection_level;
         this.child_friendly = response2.data.breeds[0].child_friendly;
         this.dog_friendly = response2.data.breeds[0].dog_friendly;
+        this.grooming = response2.data.breeds[0].grooming;
 
         this.allofit = response.data;
             } catch (err) {
