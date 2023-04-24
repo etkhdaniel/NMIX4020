@@ -14,7 +14,7 @@ Vue.component('cat', {
                 <div :style = "{width: dog_friendly * 100 + 'px', backgroundColor: '#0077b6', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Dog-Friendly</div>
                 <div :style = "{width: energy_level * 100 + 'px', backgroundColor: '#90e0ef', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Energy Level</div>
                 <div :style = "{width: grooming * 100 + 'px', backgroundColor: '#52b2bf', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Grooming</div>
-                <div :style = "{width: health_issues * 100 + 'px', backgroundColor: '#0077b6', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Health Issues</div>
+                <div :style = "{width: health_issues * 100 + 'px', backgroundColor: '#82eefd', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Health Issues</div>
             </div>
             <button v-on:click="slideshow">slideshow</button>
             <img :src="image.url">
