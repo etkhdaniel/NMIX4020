@@ -10,7 +10,7 @@ Vue.component('cat', {
             <p>{{temperament}}</p>
             <h2>Adaptability Score: {{adapt}}</h2>
             <div style = "{width: '200px', backgroundColor: '#B1AE91', justifyContent: 'center'}">
-                <div :style = "{width: affection_level * 100 + 'px', backgroundColor: '#90e0ef', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Affection Level</div>
+                <div :style = "{width: energy_level * 100 + 'px', backgroundColor: '#90e0ef', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Energy Level</div>
                 <div :style = "{width: child_friendly * 100 + 'px', backgroundColor: '#00b4d8', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Child-Friendly</div>
                 <div :style = "{width: dog_friendly * 100 + 'px', backgroundColor: '#0077b6', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Dog-Friendly</div>
             </div>
@@ -27,7 +27,7 @@ Vue.component('cat', {
                 description: "",
                 origin: "",
                 temperament: "",
-                affection_level: "",
+                energy_level: "",
                 child_friendly: "",
                 dog_friendly: ""
             }
@@ -55,7 +55,7 @@ Vue.component('cat', {
         this.description = response2.data.breeds[0].description;
         this.origin = response2.data.breeds[0].origin;
         this.temperament = response2.data.breeds[0].temperament;
-        this.affection_level = response2.data.breeds[0].affection_level;
+        this.energy_level = response2.data.breeds[0].affection_level;
         this.child_friendly = response2.data.breeds[0].child_friendly;
         this.dog_friendly = response2.data.breeds[0].dog_friendly;
 
