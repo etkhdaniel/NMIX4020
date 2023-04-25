@@ -42,6 +42,9 @@
                 font-variant: small-caps;
                 font-size: 50px;
             }
+            p {
+                display: flex;
+            }
         </style>
     </head>
     <body>
@@ -67,6 +70,17 @@
                     How it Works:
                 </h3>
                 <p>
+                    Once you get the properties of one cat to display correctly, it is easy to create a Vue 
+                    component for the other breeds of cats. This component calls loadNextImage with the prop, whichCat, 
+                    which gives the prop the name to find the id in the Cat API. loadNextImage loads the first 10 images
+                    for each breed in order to display them in the slideshow. The data section in the catshow.js 
+                    file returns each of the variables and the template contains the HTML that is used when the component is used. 
+                    I also created the slideshow button in the template to link to the slideshow button so that everytime 
+                    it is clicked the slideshow function is executed and another of the 10 images is displayed. As per the suggestion
+                    on the directions I also created bar charts for the child_friendly, dog_friendly, energy_level,
+                    grooming, and health_issues variables by creating a corresponding div that is sized according to its value.
+                    The function also collects and displays the data for the description, temperment, and friendliness levels for 
+                    each breed that I used in the slideshow. 
                 </p>
             </div>
         </div>
