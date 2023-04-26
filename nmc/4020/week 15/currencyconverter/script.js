@@ -34,6 +34,7 @@ let convertCurrency = () => {
       .then((resp) => resp.json())
       .then((data) => {
         let fromExchangeRate = data.conversion_rates[fromCurrency];
+        console.log(fromExchangeRate);
         let toExchangeRate = data.conversion_rates[toCurrency];
         const convertedAmount = (amount / fromExchangeRate) * toExchangeRate;
         result.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(
@@ -45,7 +46,5 @@ let convertCurrency = () => {
   }
 };
 
-document
-  .querySelector("#convert-button")
-  .addEventListener("click", convertCurrency);
+//document.querySelector("#convert-button").addEventListener("click", convertCurrency);
 window.addEventListener("load", convertCurrency);
