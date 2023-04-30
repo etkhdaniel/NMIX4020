@@ -16,7 +16,7 @@ Vue.component('cat', {
                 <div :style = "{width: grooming * 100 + 'px', backgroundColor: '#52b2bf', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Grooming</div>
                 <div :style = "{width: health_issues * 100 + 'px', backgroundColor: '#82eefd', borderRadius: '1px', borderStyle: 'solid', borderColor: '#000000', margin: '2px'}">Health Issues</div>
             </div>
-            <button v-on:click="slideshow">slideshow</button>
+            <button v-on:click="slideshow">click me</button>
             <img :src="image.url">
         </div>`, 
         data() {
